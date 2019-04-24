@@ -48,7 +48,7 @@ spec:
 ---
 
 apiVersion: autoscaling/v2beta1
-Kind: HorizontalPodAutoscaler
+kind: HorizontalPodAutoscaler
 metadata:
   name: train-schedule
 spec:
@@ -56,7 +56,7 @@ spec:
   minReplicas: 1
   scaleTargetRef:
     apiVersion: apps/v1
-    Kind: Deployment
+    kind: Deployment
     name: train-schedule-deployment
   metrics:
   - type: Resource
